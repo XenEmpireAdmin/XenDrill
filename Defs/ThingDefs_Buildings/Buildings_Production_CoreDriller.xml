@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CoreDrill</defName>
+	<ThingClass>Building_WorkTable</ThingClass>
+    <label>core drill</label>
+    <description>A ultra deep-crust drilling rig for extracting minerals from deep under the surface.</description>
+    <size>(3,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>7</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>Production</designationCategory>
+    <rotatable>true</rotatable>
+    <costList>
+      <Steel>200</Steel>
+      <Component>1</Component>
+	  <Plasteel>4</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>DeepDrilling</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+	  <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+		<li>XToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Drill/TableMining</texPath>
+      <drawSize>(3.5,1.5)</drawSize>
+    </graphicData>
+	<recipes>
+      <li>MiningDeepSteel</li>
+	  <li>MiningDeepPlasteel</li>
+	  <li>MiningDeepUranium</li>
+	  <li>MiningDeepSilver</li>
+	  <li>MiningDeepGold</li>
+	  <li>MiningDeepJade</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+  </ThingDef>
+  
+</ThingDefs>
